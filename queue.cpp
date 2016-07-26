@@ -2,44 +2,20 @@
 using namespace std;
  
 class Queue {
-    const int MAX_SPACE;
-    int front;
-    int rear;
-    int *space;
-     
     public:
-        Queue(int nSpace) :MAX_SPACE(nSpace)
+        Queue(int nSpace)
         {
-            front = 0;
-            rear = 0;
-             
-            space = new int[nSpace];
         }
          
         bool EnQueue(int v)
         {
-            if (rear == MAX_SPACE)
-            {
-                return false;
-            }
-            space[rear++] = v;
-             
+            // return if succeed
             return true;
         }
          
         int DeQueue()
         {
-            ///////////////// 여기 부터
-            if (front == rear)
-            {
-                return -1;
-            }
-         
-            int temp = space[front];
-            space[front++] = -1;
-             
-            return temp;
-            //////////////// 여기 까지
+            // return -1 if no more data
         }
 };
  
@@ -72,7 +48,7 @@ int main()
         nSum -= nRet;
     }
      
-    cout << (nSum == 0 ? "pass" : "fail") << endl;
+    cout << (nSum == 0 ? "PASS" : "FAIL!!!") << endl;
  
     return 0;
 }

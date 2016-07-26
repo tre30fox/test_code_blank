@@ -12,12 +12,8 @@ zda => adz
 */
 const char* reverse(char* data, int len)
 {
-    for(int i=0; i<len/2;++i)
-    {
-        char temp = data[i];
-        data[i] = data[len-i-1];
-        data[len-i-1] = temp;
-    }
+    // implement here
+    
     return data;
 }
 
@@ -25,17 +21,17 @@ const char* reverse(char* data, int len)
 int main()
 {
     char test1[] = "1234";
-    cout << (strcmp(reverse(test1, strlen(test1)), "4321") == 0 ? "PASS": "FAIL") << endl;
+    cout << (strcmp(reverse(test1, strlen(test1)), "4321") == 0 ? "PASS": "FAIL!!!") << endl;
 
     char test2[] = "aBc";
-    cout << (strcmp(reverse(test2, strlen(test2)), "cBa") == 0 ? "PASS": "FAIL") << endl;
+    cout << (strcmp(reverse(test2, strlen(test2)), "cBa") == 0 ? "PASS": "FAIL!!!") << endl;
 
     char test3[] = "z3";
-    cout << (strcmp(reverse(test3, strlen(test3)), "3z") == 0 ? "PASS": "FAIL") << endl;
+    cout << (strcmp(reverse(test3, strlen(test3)), "3z") == 0 ? "PASS": "FAIL!!!") << endl;
 
     char test4[] = "q";
-    cout << (strcmp(reverse(test4, strlen(test4)), "q") == 0 ? "PASS": "FAIL") << endl;
+    cout << (strcmp(reverse(test4, strlen(test4)), "q") == 0 ? "PASS": "FAIL!!!") << endl;
 
     char test5[] = "vtdqj2";
-    cout << (strcmp(reverse(test5, strlen(test5)), "2jqdtv") == 0 ? "PASS": "FAIL") << endl;
+    cout << (strcmp(reverse(test5, strlen(test5)), "2jqdtv") == 0 ? "PASS": "FAIL!!!") << endl;
 }
