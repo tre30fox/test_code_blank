@@ -13,7 +13,30 @@ ex)
 bool rotate(const char* data, const char* rotated, int len)
 {
     // implement hero
+    char* tmp = new char[len * 3 +1];
+    tmp[len*3] = '\0';
+    
+    for (int i = 0; i < 3; ++i) {
+        strcpy(tmp + (len * i) , data);
+    }
+    
+    int offset = 0;
+    
 
+    for (int i = 0; i <= strlen(tmp) ; ++i) {
+        if ( *(tmp+i) ==  *(data+offset)  ) {
+            
+            if (offset++ == len) {
+                
+                return true;
+            }
+            continue;
+        } 
+        
+        //if (offset != 0) return false;
+    }
+    
+    
     return false;
 }
 

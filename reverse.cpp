@@ -13,8 +13,19 @@ zda => adz
 const char* reverse(char* data, int len)
 {
     // implement here
-    
-    return data;
+    char* tmp = new char[len+1]; 
+     
+     for (int i = len; i >= 0; --i) {
+       *( tmp + (len-i)) = *(data + i);
+        
+       // cout << *(tmp +(len-i));
+     }
+     
+     tmp[len] = '\0';
+     
+     
+     
+    return tmp;
 }
 
 
